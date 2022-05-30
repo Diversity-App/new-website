@@ -24,7 +24,14 @@ export function DiversityLogo({ variant = 'default', width = 110, ...others }: D
   const theme = useMantineTheme();
 
   return (
-    <svg {...others} version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 488" width={width} height="488">
+    <svg
+      {...others}
+      version="1.2"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 488 488"
+      width={width}
+      height={width * 1.5}
+    >
       <path
         fillRule="evenodd"
         fill={matchColor(variant, theme)}
