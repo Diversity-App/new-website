@@ -120,7 +120,7 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
                 scale: 1.1,
               }}
             >
-              <DiversityLogo width={40} variant="black" />
+              <DiversityLogo width={40} />
             </motion.i>
             <Text
               component="a"
