@@ -4,6 +4,7 @@ import { MantineProvider } from '@mantine/core';
 import Layout from '../components/Layout';
 import '../styles/globals.css';
 import { appWithTranslation } from 'next-i18next';
+import { NotificationsProvider } from '@mantine/notifications';
 
 function App(props: AppProps) {
   const { Component, pageProps } = props;
@@ -22,9 +23,11 @@ function App(props: AppProps) {
           colorScheme: 'light',
         }}
       >
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <NotificationsProvider>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </NotificationsProvider>
       </MantineProvider>
     </>
   );
