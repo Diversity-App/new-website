@@ -1,0 +1,13 @@
+{
+	"hero": {
+		"title": "A <0>simple</0> app that analyzes <0>your</0> data",
+		"subtitle": "Created by a team of developers passionate about social medias, Diversity allows you to analyze your data on social networks.",
+		"start": "Start to analyze your data",
+		"contact": "Contact us",
+		"bulletpoints": {
+			"1": "<0>100% Transparent</0> - No data is collected or stored on our servers.",
+			"2": "<0>Free</0> - You don't have to pay anything to use Diversity.",
+			"3": "<0>No spam</0> - We won't send you any spam."
+		}
+	}
+}

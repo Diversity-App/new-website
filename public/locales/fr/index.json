@@ -1,0 +1,13 @@
+{
+	"hero": {
+		"title": "Une application <0>simple</0> d'analyse de <0>vos</0> données",
+		"subtitle": "Créé par une équipe de développeurs passionnés par les réseaux sociaux, Diversity vous permet d'analyser vos données sur les réseaux sociaux en les connectant a notre plateforme",
+		"start": "Commencer à analyser",
+		"contact": "Contactez-nous",
+		"bulletpoints": {
+			"1": "<0>100% Transparent</0> - Aucune donnée n'est stockée sur nos serveurs",
+			"2": "<0>Gratuit</0> - Vous n'avez pas à payer pour utiliser notre application",
+			"3": "<0>Pas de spam</0> - Nous ne vous que des emails pertinents"
+		}
+	}
+}
