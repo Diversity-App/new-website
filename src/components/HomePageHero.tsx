@@ -88,7 +88,11 @@ export default function HomePageHero(props: any) {
       <div className={classes.content}>
         <Title className={classes.title}>
           <div style={{ padding: 50 }}>
-            <Trans i18nKey="hero.title" t={t} components={[<span key="hero.title" className={classes.highlight} />]} />
+            <Trans
+              i18nKey="hero.title"
+              t={t}
+              components={[<span key="hero.title" className={classes.highlight} />]}
+            />
           </div>
         </Title>
         <Text color="dimmed" mt="md">
@@ -106,13 +110,25 @@ export default function HomePageHero(props: any) {
           }
         >
           <List.Item>
-            <Trans t={t} i18nKey="hero.bulletpoints.1" components={[<b key="hero.bulletpoints.1" />]} />
+            <Trans
+              t={t}
+              i18nKey="hero.bulletpoints.1"
+              components={[<b key="hero.bulletpoints.1" />]}
+            />
           </List.Item>
           <List.Item>
-            <Trans t={t} i18nKey="hero.bulletpoints.2" components={[<b key="hero.bulletpoints.2" />]} />
+            <Trans
+              t={t}
+              i18nKey="hero.bulletpoints.2"
+              components={[<b key="hero.bulletpoints.2" />]}
+            />
           </List.Item>
           <List.Item>
-            <Trans t={t} i18nKey="hero.bulletpoints.3" components={[<b key="hero.bulletpoints.3" />]} />
+            <Trans
+              t={t}
+              i18nKey="hero.bulletpoints.3"
+              components={[<b key="hero.bulletpoints.3" />]}
+            />
           </List.Item>
         </List>
 
@@ -120,7 +136,7 @@ export default function HomePageHero(props: any) {
           <Button radius="xl" size="md" className={classes.control} leftIcon={<IconSearch />}>
             {t('hero.start')}
           </Button>
-          <ContactForm/>
+          <ContactForm />
         </Group>
       </div>
       <Image src={image.src} className={classes.image} alt="Background image" />

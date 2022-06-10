@@ -1,12 +1,19 @@
 import React from 'react';
 import { createStyles, Container, Group, ActionIcon, Text } from '@mantine/core';
-import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram, IconBrandLinkedin } from '@tabler/icons';
+import {
+  IconBrandTwitter,
+  IconBrandYoutube,
+  IconBrandInstagram,
+  IconBrandLinkedin,
+} from '@tabler/icons';
 import { DiversityLogo } from '../assets/DiversityLogo';
 import Link from 'next/link';
 
 const useStyles = createStyles((theme) => ({
   footer: {
-    borderTop: `1px solid ${theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[2]}`,
+    borderTop: `1px solid ${
+      theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[2]
+    }`,
   },
 
   inner: {

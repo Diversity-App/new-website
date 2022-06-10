@@ -1,5 +1,14 @@
 import React, { useState } from 'react';
-import { createStyles, Header, Container, Group, Burger, Paper, Transition, Text } from '@mantine/core';
+import {
+  createStyles,
+  Header,
+  Container,
+  Group,
+  Burger,
+  Paper,
+  Transition,
+  Text,
+} from '@mantine/core';
 import { useBooleanToggle } from '@mantine/hooks';
 import { DiversityLogo } from '../assets/DiversityLogo';
 import { NextLink } from '@mantine/next';
@@ -137,7 +146,12 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
           {items}
         </Group>
 
-        <Burger opened={opened} onClick={() => toggleOpened()} className={classes.burger} size="sm" />
+        <Burger
+          opened={opened}
+          onClick={() => toggleOpened()}
+          className={classes.burger}
+          size="sm"
+        />
 
         <Transition transition="pop-top-right" duration={200} mounted={opened}>
           {(styles) => (

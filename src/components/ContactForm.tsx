@@ -199,7 +199,7 @@ export function ContactUs(props: any) {
             required
             id="message"
             label="Your message"
-            placeholder="Hello, I am Nigerian prince who is looking to give away my fortune. I have been blessed with a large sum of money and I want to share it with someone who is in need. If you are interested in receiving my gift, please reply to this email and I will send you more information. "
+            placeholder="Hey Diversity ! I'm interested in your project..."
             minRows={9}
             mt="md"
             {...form.getInputProps('message')}
@@ -209,7 +209,11 @@ export function ContactUs(props: any) {
             <Text>
               Made with
               <Anchor target="_blank" href="https://formspree.io/">
-                <Image alt="Formspree-logo" width={100} src="https://formspree.io/static/img/formspree-new.svg" />
+                <Image
+                  alt="Formspree-logo"
+                  width={100}
+                  src="https://formspree.io/static/img/formspree-new.svg"
+                />
               </Anchor>
             </Text>
             <Button type="submit">Send message</Button>

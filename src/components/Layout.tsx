@@ -27,7 +27,10 @@ export default function Layout(props: any) {
         </Footer>
       }
       styles={(theme) => ({
-        main: { backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[0] },
+        main: {
+          backgroundColor:
+            theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[0],
+        },
       })}
     >
       {props.children}
