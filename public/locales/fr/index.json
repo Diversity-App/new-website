@@ -9,5 +9,21 @@
 			"2": "<0>Gratuit</0> - Vous n'avez pas à payer pour utiliser notre application",
 			"3": "<0>Pas de spam</0> - Nous ne vous que des emails pertinents"
 		}
+	},
+	"contact": {
+		"title": "Contact",
+		"subtitle": "Envoyez nous un petit message",
+		"sending": {
+			"title": "Envoi en cours",
+			"message": "Vôtre message est en cours d'envoi, merci de patienter"
+		},
+		"error": {
+			"title": "Erreur",
+			"message": "Une erreur est survenue, veuillez réessayer"
+		},
+		"sent": {
+			"title": "Succès",
+			"message": "Votre message a bien été envoyé, nous vous répondrons dans les plus brefs délais"
+		}
 	}
 }
