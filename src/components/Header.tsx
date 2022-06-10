@@ -10,10 +10,9 @@ import {
   Text,
 } from '@mantine/core';
 import { useBooleanToggle } from '@mantine/hooks';
-import { DiversityLogo } from '../assets/DiversityLogo';
-import { NextLink } from '@mantine/next';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { DiversityLogo } from '../assets/DiversityLogo';
 
 const HEADER_HEIGHT = 60;
 
@@ -134,7 +133,7 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
             <Text
               component="a"
               weight={800}
-              size={'xl'}
+              size="xl"
               variant="gradient"
               style={{ userSelect: 'none', textDecoration: 'none', cursor: 'pointer' }}
             >

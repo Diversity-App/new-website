@@ -12,13 +12,12 @@ import {
   Image,
   Anchor,
 } from '@mantine/core';
-import { Check, Cross } from 'tabler-icons-react';
 import { useForm } from '@mantine/form';
 import { showNotification, updateNotification } from '@mantine/notifications';
 import axios from 'axios';
-import { IconMail } from '@tabler/icons';
-import { FORMSPREE_URL } from '../Constants';
+import { IconCheck, IconCross, IconMail } from '@tabler/icons';
 import { useTranslation } from 'next-i18next';
+import { FORMSPREE_URL } from '../Constants';
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
@@ -103,7 +102,7 @@ export default function ContactForm(props: any) {
         <ContactUs close={setOpened} />
       </Modal>
       <Button
-        color={'orange'}
+        color="orange"
         radius="xl"
         size="md"
         className={classes.control}
@@ -159,7 +158,7 @@ export function ContactUs(props: any) {
                     color: 'teal',
                     title: t('contact.success.title'),
                     message: t('contact.success.message'),
-                    icon: <Check />,
+                    icon: <IconCheck />,
                     autoClose: 2000,
                   });
                   props.close(false);
@@ -170,7 +169,7 @@ export function ContactUs(props: any) {
                     color: 'red',
                     title: t('contact.error.title'),
                     message: t('contact.error.message'),
-                    icon: <Cross />,
+                    icon: <IconCross />,
                     autoClose: 2000,
                   });
                   props.close(false);

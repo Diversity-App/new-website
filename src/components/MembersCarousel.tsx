@@ -9,7 +9,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 import React from 'react';
-import { createStyles, Avatar, Text, Group, Card, Anchor } from '@mantine/core';
+import { createStyles, Avatar, Text, Group, Anchor } from '@mantine/core';
 import { IconAt, IconBrandLinkedin } from '@tabler/icons';
 import { Members } from '../Constants';
 

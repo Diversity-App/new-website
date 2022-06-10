@@ -1,26 +1,10 @@
-import type { GetStaticProps, NextPage } from 'next';
-import Head from 'next/head';
-import styles from '../styles/Index.module.css';
 import React, { useState } from 'react';
-import {
-  createStyles,
-  Image,
-  Container,
-  Title,
-  Button,
-  Group,
-  Text,
-  List,
-  ThemeIcon,
-  useMantineTheme,
-} from '@mantine/core';
-import { IconCheck, IconEyeglass, IconMail, IconSearch } from '@tabler/icons';
-import image from '../assets/hero.svg';
+import { createStyles, Image, Title, Button, Group, Text, List, ThemeIcon } from '@mantine/core';
+import { IconCheck, IconSearch } from '@tabler/icons';
 import { useRouter } from 'next/router';
 import { Trans, useTranslation } from 'next-i18next';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import Link from 'next/link';
-import ContactForm, { ContactUs } from './ContactForm';
+import image from '../assets/hero.svg';
+import ContactForm from './ContactForm';
 
 const useStyles = createStyles((theme) => ({
   inner: {

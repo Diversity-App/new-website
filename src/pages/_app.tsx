@@ -1,10 +1,10 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import { MantineProvider } from '@mantine/core';
-import Layout from '../components/Layout';
 import '../styles/globals.css';
 import { appWithTranslation } from 'next-i18next';
 import { NotificationsProvider } from '@mantine/notifications';
+import Layout from '../components/Layout';
 
 function App(props: AppProps) {
   const { Component, pageProps } = props;
