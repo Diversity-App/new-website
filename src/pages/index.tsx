@@ -21,12 +21,18 @@ import { Trans, useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Link from 'next/link';
 import HomePageHero from '../components/HomePageHero';
+import MemberCarousel from '../components/MembersCarousel';
 
 export function HomePage() {
+  const { t } = useTranslation(['common']);
   return (
     <div>
       <Container>
         <HomePageHero />
+        <Title order={3} mb={'xl'}>
+          {t('aboutus')}
+        </Title>
+        <MemberCarousel />
       </Container>
     </div>
   );
