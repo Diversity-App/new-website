@@ -1,6 +1,6 @@
-import type { NextPage } from 'next';
+import type { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
-import styles from '../styles/Home.module.css';
+import styles from '../styles/Index.module.css';
 import React from 'react';
 import {
   createStyles,
@@ -16,6 +16,10 @@ import {
 } from '@mantine/core';
 import { IconCheck, IconEyeglass, IconMail, IconSearch } from '@tabler/icons';
 import image from '../assets/hero.svg';
+import { useRouter } from 'next/router';
+import { Trans, useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import Link from 'next/link';
 
 const useStyles = createStyles((theme) => ({
   inner: {
@@ -72,21 +76,28 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-export function HeroBullets() {
-  const theme = useMantineTheme();
+export function HomePage() {
   const { classes } = useStyles();
+  const router = useRouter();
+  const count = 5;
+  const { t } = useTranslation(['index']);
+  const name = 'David';
   return (
     <div>
       <Container>
         <div className={classes.inner}>
           <div className={classes.content}>
             <Title className={classes.title}>
-              Une application <span className={classes.highlight}>simple</span>
-              <br /> d&apos;analyse de <span className={classes.highlight}>vos</span> données
+              <div style={{ padding: 50 }}>
+                <Trans
+                  i18nKey="hero.title"
+                  t={t}
+                  components={[<span key="hero.title" className={classes.highlight} />]}
+                />
+              </div>
             </Title>
             <Text color="dimmed" mt="md">
-              Créé par une équipe de développeurs passionnés par le développement web et les réseaux sociaux, Diversity
-              vous permet d&apos;analyser vos données sur les réseaux sociaux en les connectant a notre plateforme
+              {t('hero.subtitle')}
             </Text>
 
             <List
@@ -100,22 +111,22 @@ export function HeroBullets() {
               }
             >
               <List.Item>
-                <b>100% transparent</b> - Aucune donnée n&apos;est stockée sur notre serveur
+                <Trans t={t} i18nKey="hero.bulletpoints.1" components={[<b key="hero.bulletpoints.1" />]} />
               </List.Item>
               <List.Item>
-                <b>Gratuit</b> - L&apos;application est gratuite d&apos;utilisation
+                <Trans t={t} i18nKey="hero.bulletpoints.2" components={[<b key="hero.bulletpoints.2" />]} />
               </List.Item>
               <List.Item>
-                <b>Pas de spam</b> - Nous vous enverrons que des emails pertinents
+                <Trans t={t} i18nKey="hero.bulletpoints.3" components={[<b key="hero.bulletpoints.3" />]} />
               </List.Item>
             </List>
 
             <Group mt={30}>
               <Button radius="xl" size="md" className={classes.control} leftIcon={<IconSearch />}>
-                Commencer à analyser
+                {t('hero.start')}
               </Button>
               <Button color={'orange'} radius="xl" size="md" className={classes.control} leftIcon={<IconMail />}>
-                Nous contacter
+                {t('hero.contact')}
               </Button>
             </Group>
           </div>
@@ -126,4 +137,13 @@ export function HeroBullets() {
   );
 }
 
-export default HeroBullets;
+export async function getStaticProps({ locale }: any) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['index', 'common'])),
+      // Will be passed to the page component as props
+    },
+  };
+}
+
+export default HomePage;

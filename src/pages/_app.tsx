@@ -2,8 +2,10 @@ import { AppProps } from 'next/app';
 import Head from 'next/head';
 import { MantineProvider } from '@mantine/core';
 import Layout from '../components/Layout';
+import '../styles/globals.css';
+import { appWithTranslation } from 'next-i18next';
 
-export default function App(props: AppProps) {
+function App(props: AppProps) {
   const { Component, pageProps } = props;
 
   return (
@@ -27,3 +29,5 @@ export default function App(props: AppProps) {
     </>
   );
 }
+
+export default appWithTranslation(App);

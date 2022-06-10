@@ -1,8 +1,10 @@
 import { AppShell, Footer, Header } from '@mantine/core';
+import { useTranslation } from 'next-i18next';
 import { DivFooter } from './Footer';
 import { HeaderResponsive } from './Header';
 
 export default function Layout(props: any) {
+  const { t } = useTranslation('common');
   return (
     <AppShell
       padding="md"
@@ -13,7 +15,7 @@ export default function Layout(props: any) {
               {
                 //TODO: Add links to the other pages
                 link: '/',
-                label: 'Accueil',
+                label: t('home'),
               },
             ]}
           />

@@ -1,7 +1,8 @@
 import React from 'react';
 import { createStyles, Container, Group, ActionIcon, Text } from '@mantine/core';
-import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons';
+import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram, IconBrandLinkedin } from '@tabler/icons';
 import { DiversityLogo } from '../assets/DiversityLogo';
+import Link from 'next/link';
 
 const useStyles = createStyles((theme) => ({
   footer: {
@@ -45,13 +46,14 @@ export function DivFooter() {
 
         <Group spacing={0} className={classes.links} position="right" noWrap>
           <ActionIcon size="lg">
-            <IconBrandTwitter size={18} />
+            <Link target={'_blank'} href={'https://www.linkedin.com/company/diversityapp/'}>
+              <IconBrandLinkedin size={18} />
+            </Link>
           </ActionIcon>
           <ActionIcon size="lg">
-            <IconBrandYoutube size={18} />
-          </ActionIcon>
-          <ActionIcon size="lg">
-            <IconBrandInstagram size={18} />
+            <Link target={'_blank'} href={'https://www.instagram.com/diversity.app/'}>
+              <IconBrandInstagram size={18} />
+            </Link>
           </ActionIcon>
         </Group>
       </Container>
