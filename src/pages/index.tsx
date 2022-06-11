@@ -1,9 +1,10 @@
 import React from 'react';
-import { Container, Title } from '@mantine/core';
+import { Container, Divider, Title } from '@mantine/core';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import HomePageHero from '../components/HomePageHero';
 import MemberCarousel from '../components/MembersCarousel';
+import MailchimpSubscribeForm from '../components/MailchimpSubscribe';
 
 export function HomePage() {
   const { t } = useTranslation(['common']);
@@ -15,6 +16,8 @@ export function HomePage() {
           {t('aboutus')}
         </Title>
         <MemberCarousel />
+        <Divider my="xl" variant="dotted" size="sm" />
+        <MailchimpSubscribeForm />
       </Container>
     </div>
   );

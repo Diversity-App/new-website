@@ -25,5 +25,10 @@
 			"title": "Succès",
 			"message": "Votre message a bien été envoyé, nous vous répondrons dans les plus brefs délais"
 		}
+	},
+	"newsletter": {
+		"title": "S'abonner à nôtre newsletter",
+		"description": "Recevez notre newsletter quotidiennement avec des informations sur notre projet",
+		"subscribe": "S'inscrire"
 	}
 }

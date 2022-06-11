@@ -25,5 +25,10 @@
 			"title": "Error",
 			"message": "An error occured while sending your message. Please try again later."
 		}
+	},
+	"newsletter": {
+		"title": "Subscribe to our newsletter",
+		"description": "Subscribe to our newsletter to get the latest news and updates.",
+		"subscribe": "Subscribe"
 	}
 }
