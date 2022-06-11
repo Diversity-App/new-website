@@ -30,5 +30,24 @@
 		"title": "S'abonner à nôtre newsletter",
 		"description": "Recevez notre newsletter quotidiennement avec des informations sur notre projet",
 		"subscribe": "S'inscrire"
-	}
+	},
+	"stats": {
+		"active": {
+			"title": "Utilisateurs actifs",
+			"description": "En 2019, les réseaux sociaux regrouppaient déjà 49.9M d'utilisateurs en France seulement. (sur 65.3M)"
+		},
+		"time": {
+			"title": "Par jour",
+			"description": "La moyenne de temps passé sur les réseaux sociaux est de 2h30 par jour."
+		},
+		"perperson": {
+			"title": "Réseaux sociaux par personne",
+			"description": "C'est la moyenne de réseaux sociaux qu'une personne à sur son téléphone:"
+		},
+		"diversified": {
+			"title": "Sont diversifiés",
+			"description": "Seulement la moitié des utilisateurs estimment regarder du contenu suffisamment diversifié."
+		}
+	},
+	"aboutus": "Qui sommes nous ?"
 }

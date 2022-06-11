@@ -30,5 +30,24 @@
 		"title": "Subscribe to our newsletter",
 		"description": "Subscribe to our newsletter to get the latest news and updates.",
 		"subscribe": "Subscribe"
-	}
+	},
+	"stats": {
+		"active": {
+			"title": "Active users",
+			"description": "In 2019, social medias already had a total of 49.6M daily french users. (out of 65.3M)"
+		},
+		"time": {
+			"title": "Per day",
+			"description": "The average time spent on social medias per day is 2.25 hours."
+		},
+		"perperson": {
+			"title": "Social medias per person",
+			"description": "This is the average number of social medias installed on a person's phone."
+		},
+		"diversified": {
+			"title": "Are diversified",
+			"description": "Only half of the users of such social medias think that they watch diverse content."
+		}
+	},
+	"aboutus": "Who are we?"
 }
