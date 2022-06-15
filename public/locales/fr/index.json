@@ -49,5 +49,20 @@
 			"description": "Seulement la moitié des utilisateurs estimment regarder du contenu suffisamment diversifié."
 		}
 	},
-	"aboutus": "Qui sommes nous ?"
+	"aboutus": "Qui sommes nous ?",
+		"faq": {
+			"title": "Questions fréquentes",
+			"datastored": {
+				"title": "Ou sont sauvegaré mes données ?",
+				"description": "Nous ne stockont aucune donnée sur nos serveurs, vous nous en servont juste pour calculer vos résultats."
+			},
+			"accountsecure": {
+				"title": "Comment mon compte est-il sécurisé ?",
+				"description": "Nous utlilisons un protocole sécurisé pour protéger vos données."
+			},
+			"integratedplatforms": {
+				"title": "Quelles plateformes sont intégrés dans diversity ?",
+				"description": "Nous intégrons actullement les plateformes suivantes : <0>TikTok</0>, <0>YouTube</0> et <0>Instagram</0>"
+			}
+		}
 }

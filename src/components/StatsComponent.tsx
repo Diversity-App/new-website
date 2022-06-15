@@ -1,5 +1,6 @@
 import React from 'react';
 import { createStyles, Text } from '@mantine/core';
+import { useTranslation } from 'next-i18next';
 
 const useStyles = createStyles((theme) => ({
   root: {
@@ -57,11 +58,31 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-interface StatsGroupProps {
-  data: { title: string; stats: string; description: string }[];
-}
+export default function StatsGroup(props: any) {
+  const { t } = useTranslation(['index']);
+  const data = [
+    {
+      title: t('stats.active.title'),
+      stats: '49,6M',
+      description: t('stats.active.description'),
+    },
+    {
+      title: t('stats.time.title'),
+      stats: '2h25',
+      description: t('stats.time.description'),
+    },
+    {
+      title: t('stats.perperson.title'),
+      stats: '8.4',
+      description: t('stats.perperson.description'),
+    },
+    {
+      title: t('stats.diversified.title'),
+      stats: '47%',
+      description: t('stats.diversified.description'),
+    },
+  ];
 
-export default function StatsGroup({ data }: StatsGroupProps) {
   const { classes } = useStyles();
   const stats = data.map((stat) => (
     <div key={stat.title} className={classes.stat}>

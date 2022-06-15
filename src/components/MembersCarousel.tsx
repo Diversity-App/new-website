@@ -9,8 +9,9 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 import React from 'react';
-import { createStyles, Avatar, Text, Group, Anchor } from '@mantine/core';
+import { createStyles, Avatar, Text, Group, Anchor, Title } from '@mantine/core';
 import { IconAt, IconBrandLinkedin } from '@tabler/icons';
+import { useTranslation } from 'next-i18next';
 import { Members } from '../Constants';
 
 const useStyles = createStyles((theme) => ({
@@ -69,24 +70,30 @@ export function UserInfoIcons({ avatar, name, title, linkedin, email }: UserInfo
 }
 
 export default function MemberCarousel() {
+  const { t } = useTranslation(['index']);
   return (
-    <Swiper
-      modules={[Pagination, A11y, Keyboard, Autoplay]}
-      style={{
-        maxWidth: '100%',
-        maxHeight: '100vh',
-      }}
-      slidesPerView={1}
-      autoplay={{ delay: 8000 }}
-      keyboard
-      loop
-      pagination={{ clickable: true }}
-    >
-      {Members.map((member) => (
-        <SwiperSlide key={member.name}>
-          <UserInfoIcons {...member} />
-        </SwiperSlide>
-      ))}
-    </Swiper>
+    <>
+      <Title order={3} mb="xl">
+        {t('aboutus')}
+      </Title>
+      <Swiper
+        modules={[Pagination, A11y, Keyboard, Autoplay]}
+        style={{
+          maxWidth: '100%',
+          maxHeight: '100vh',
+        }}
+        slidesPerView={1}
+        autoplay={{ delay: 8000 }}
+        keyboard
+        loop
+        pagination={{ clickable: true }}
+      >
+        {Members.map((member) => (
+          <SwiperSlide key={member.name}>
+            <UserInfoIcons {...member} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </>
   );
 }

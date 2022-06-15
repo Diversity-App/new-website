@@ -49,5 +49,21 @@
 			"description": "Only half of the users of such social medias think that they watch diverse content."
 		}
 	},
-	"aboutus": "Who are we?"
+	"aboutus": "Who are we?",
+	"faq": {
+		"title": "Frequently asked questions",
+		"datastored": {
+			"title": "Where is my data stored ?",
+			"description": "We don't store any data on our servers. We only use your data to analyze it."
+		},
+		"accountsecure": {
+			"title": "Is my account secure ?",
+			"description": "We use a secure protocol to protect your data. Your password is stored as a PIN."
+		},
+		"integratedplatforms": 
+		{
+			"title": "Are we integrated with other platforms ?",
+			"description": "We are integrated with the following platforms : <0>TikTok</0>, <0>YouTube</0> and <0>Instagram</0>"
+		}
+	}
 }
