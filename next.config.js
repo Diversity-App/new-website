@@ -1,4 +1,5 @@
 const { i18n } = require('./next-i18next.config');
+const { withContentlayer } = require('next-contentlayer');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -11,4 +12,4 @@ const nextConfig = {
   reloadOnPrerender: process.env.NODE_ENV === 'production' ? false : true,
 };
 
-module.exports = nextConfig;
+module.exports = withContentlayer(nextConfig);
