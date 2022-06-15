@@ -15,7 +15,7 @@ import {
 import { useForm } from '@mantine/form';
 import { showNotification, updateNotification } from '@mantine/notifications';
 import axios from 'axios';
-import { IconCheck, IconCross, IconMail } from '@tabler/icons';
+import { IconCheck, IconMail, IconX } from '@tabler/icons';
 import { useTranslation } from 'next-i18next';
 import { FORMSPREE_URL } from '../Constants';
 
@@ -156,8 +156,8 @@ export function ContactUs(props: any) {
                   updateNotification({
                     id: 'load-data',
                     color: 'teal',
-                    title: t('contact.success.title'),
-                    message: t('contact.success.message'),
+                    title: t('contact.sent.title'),
+                    message: t('contact.sent.message'),
                     icon: <IconCheck />,
                     autoClose: 2000,
                   });
@@ -169,7 +169,7 @@ export function ContactUs(props: any) {
                     color: 'red',
                     title: t('contact.error.title'),
                     message: t('contact.error.message'),
-                    icon: <IconCross />,
+                    icon: <IconX />,
                     autoClose: 2000,
                   });
                   props.close(false);
