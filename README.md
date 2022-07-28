@@ -1,34 +1,65 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Diversity website
 
-## Getting Started
+### Technologies utilisés :
+#### [NextJS](https://nextjs.org/) Framework React pour faire tourner une application web
+#### [React](https://reactjs.org/) Framework javascript
+#### [Mantine](https://mantine.dev/) Librairie de composants React utilisés pour faire le site
+Note : Il faut mettre à jour mantine vers la v5.0.0
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
+### Installation
+#### Yarn :
+```
+yarn install
+``` 
+Pour installer tout les paquets et les dépendances
+```
 yarn dev
 ```
+Pour lancer le serveur de dev. en localhost:3000
+#### Docker : 
+```
+docker build . -t diversity-app/website
+```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Pour build le container docker
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```
+docker run -p 3000:3000 diversity-app/website
+```
+Pour lancer le container docker
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Verifier le build / formatter le code
+```
+yarn prettier:check
+yarn lint
+``` 
+Pour vérifier la qualité du code.
+Pensez à faire un ``yarn prettier:write`` pour formatter le code.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### La CI / CD
+#### Docker
+Quand un commit est push sur la branch main (branch par défaut), le container est build par la CI GitHub Actions et ensuite direcement poussé sur le repertoire de conteneurs GitHub
+[documentation github](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry)  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+*IL FAUT METTRE A JOUR LE CONTENEUR SUR LA MACHINE VIRTUELLE*  
+Càd se connecter dessus, (``ssh diversity``)  
+Faire : ``docker pull ghcr.io/diversity-app/new-website:latest``  
+Ensuite: ``docker stop website``, ``docker rm website``  
+Puis pour recreer le conteneur : ``docker run --name website --restart=always -d -p 7575:7575 ghcr.io/diversity-app/new-website:latest``
 
-## Deploy on Vercel
+Sinon, utiliser l'interface portainer.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Ouverture a internet 
+Pour que le site soit dispo via diversity-app.fr, il faut faire en sorte que le port `7575`   soit exposee dans le Tunnel Cloudflare. L'ip de l'adaptateur réseau docker0 est : `172.17.0.1`  
+Donc il faut que l'IP exposée dans le Tunnel Cloudflare soit : `172.17.0.1:7575`  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Services tierces
+#### Pour se connecter a un service tierce
+L'email est celui de Diversity. Le mot de passe suit le schema décrit dans le channel #infos (message épinglé)
+#### Formspree
+Formspreee est utilisé pour le formulaire de contact. Les messages sont envoyés sur discord directement
+#### Mailchimp
+Mailchimp est utilisé pour l'inscription à la newsletter. Les inscriptions sont envoyées sur discord directement
